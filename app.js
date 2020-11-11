@@ -21,7 +21,7 @@ handTrack.startVideo(video).then( status => {
     if(status){
         navigator.getUserMedia(
             {video:{
-                facingMode: 'user'
+                facingMode: 'environment'
         }}, 
             stream=>{
                 video.srcObject = stream;
