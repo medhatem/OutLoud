@@ -20,7 +20,9 @@ const modelParams = {
 handTrack.startVideo(video).then( status => {
     if(status){
         navigator.getUserMedia(
-            {video:{}}, 
+            {video:{
+                facingMode: 'user'
+        }}, 
             stream=>{
                 video.srcObject = stream;
                 setInterval(runDetection, 1);
